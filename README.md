@@ -1,5 +1,10 @@
 # Keychain Helper
 
+Installation
+```
+cordova plugin add https://github.com/sahajbhaikanhaiya/KeychainHelper.git
+```
+
 Setup Keychain (Required once)
 
 ```
