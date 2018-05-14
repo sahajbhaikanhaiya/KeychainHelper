@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="syn-cordova-keychain-helper"
+        version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0">
+
+    <name>KeychainHelper</name>
+
+    <js-module name="KeychainHelper" src="www/KeychainHelper.js">
+        <clobbers target="KeychainHelper" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="KeychainHelper">
+                <param name="ios-package" value="KeychainHelper" onLoad="true" />
+            </feature>
+        </config-file>
+
+        <!--UICKeychainStore-->
+        <header-file src="src/ios/UICKeychainStore/UICKeyChainStore.h"/>
+        <source-file src="src/ios/UICKeychainStore/UICKeyChainStore.m"/>
+
+        <!--Helper class-->
+        <header-file src="src/ios/KeychainHelper.h"/>
+        <source-file src="src/ios/KeychainHelper.m"/>
+
+        <framework src="Security.framework" />
+
+    </platform>
+
+</plugin>
