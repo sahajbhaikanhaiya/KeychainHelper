@@ -9,6 +9,7 @@
 - (void) saveValueInKeychain: (CDVInvokedUrlCommand *) command;
 - (void) getValueFromKeychain: (CDVInvokedUrlCommand *) command;
 - (void) getAllKeysFromKeychain: (CDVInvokedUrlCommand *) command;
+- (void) getAllItemsFromKeychain: (CDVInvokedUrlCommand *) command;
 - (void) removeValueFromKeychain: (CDVInvokedUrlCommand *) command;
 
 @end

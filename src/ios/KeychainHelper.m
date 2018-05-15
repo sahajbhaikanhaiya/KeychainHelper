@@ -98,4 +98,17 @@
     }];
 }
 
+- (void) getAllItemsFromKeychain: (CDVInvokedUrlCommand *) command{
+
+    [self.commandDelegate runInBackground:^{
+
+      NSArray *items = keychain.allItems;
+
+      CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:items];
+
+      [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+
+    }];
+}
+
 @end

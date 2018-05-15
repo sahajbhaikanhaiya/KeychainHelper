@@ -22,6 +22,10 @@ var KeychainHelper = {
 
     removeValueFromKeychain: function(success,failure,key){
         exec(success, failure, PLUGIN_NAME, 'removeValueFromKeychain', [key]);
+    },
+
+    getAllItemsFromKeychain: function(success){
+        exec(success,null,PLUGIN_NAME,'getAllItemsFromKeychain',[]);
     }
 
 };
